@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Registration Form</title>
+    <link rel="stylesheet" type="text/css" href="../templates/assets/css/login.css">
 </head>
 <body>
     <header>
@@ -17,14 +18,11 @@
     
     <h2>Registration Form</h2>
     <form method="POST" action="../requestHandler.php">
-        <label for="username">Username:</label>
-        <input type="text" name="username" id="username" required><br><br>
-        
-        <label for="email">Email:</label>
-        <input type="email" name="email" id="email" required><br><br>
-        
-        <label for="password">Password:</label>
-        <input type="password" name="password" id="password" required><br><br>
+        <input type="text" name="username" id="username" placeholder="Username" required><br><br>
+
+        <input type="email" name="email" id="email" placeholder="Email" required><br><br>
+
+        <input type="password" name="password" id="password" placeholder="Password" required><br><br>
         
         <input type="hidden" name="action" value="register">
         <input type="submit" value="Register">
