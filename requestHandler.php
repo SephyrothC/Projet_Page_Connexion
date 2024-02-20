@@ -1,24 +1,35 @@
-<?php import './functions.php' ?>
-
 <?php
+include './functions.php';
 
-// Check if the form is submitted
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Get the username and password from the form
-    $username = $_POST["username"];
-    $password = password_hash($_POST["password"], PASSWORD_DEFAULT);
+// Add the missing import statement
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Check if the form is submitted
+    $action = $_POST['action'];
 
-    // TODO: #1 Validate the username and password
-    if (empty($username) || empty($password)) {
-        return;
+    if ($action === 'register') {
+        // Handle registration
+        $username = $_POST['username'];
+        $email = $_POST['email'];
+        $password = $_POST['password'];
+
+        registerUser($username, $email, $password);
+
+        echo 'Registration successful';
+    } elseif ($action === 'login') {
+            // Retrieve the form data
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+
+        // Perform validation and authentication
+        if (loginUser($username, $password)) {
+            // Successful login
+            echo 'Login successful';
+        } else {
+            // Invalid credentials
+            echo 'Invalid username or password';
+        }
     }
-
-    // TODO: Authenticate the user
-    if(checkUserExists($username)) {
-        
-    }
-
-
-    // TODO: Redirect to the user's dashboard or display an error message
+    
 }
+
 ?>

@@ -1,18 +1,19 @@
-<?php import templates/parts/requestHandler.php; ?>
-
+<?php include "./templates/parts/header.php" ?>
 <body>
-    <h1>User Login</h1>
-    <form method="POST" action="<?php echo $_SERVER["PHP_SELF"]; ?>">
-        <label for="username">Username:</label>
-        <input type="text" name="username" id="username" required><br>
+    <header>
+        <h1>Welcome to My Website</h1>
+        <nav>
+            <ul>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="./templates/login_form.php">Login</a></li>
+                <li><a href="./templates/register_form.php">Register</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <label for="password">Password:</label>
-        <input type="password" name="password" id="password" required><br>
-
-        <input type="submit" value="Login">
-    </form>
+    <h2>Bienvenue</h2>
 </body>
 
-<?php import templates/parts/footer.php; ?>
+<?php include "./templates/parts/footer.php" ?>
 
 </html>
