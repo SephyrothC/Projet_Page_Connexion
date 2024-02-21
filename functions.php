@@ -42,4 +42,17 @@ function loginUser($username, $password) {
 
     return false;
 }
+
+/**
+ * Function to sanitize input and prevent cross-site scripting (XSS) attacks.
+ *
+ * @param string $input The input string to be sanitized.
+ * @return string The sanitized input string.
+ */
+function antixss($input) {
+    $new=strip_tags($input);
+    $new = htmlspecialchars($new, ENT_QUOTES);
+    return $new;
+}
+
 ?>

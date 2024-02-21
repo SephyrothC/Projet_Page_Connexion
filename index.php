@@ -1,7 +1,10 @@
 <?php include "./templates/parts/header.php" ?>
+
+
+
+
 <body>
     <header>
-        <h1>Welcome to My Website</h1>
         <nav>
             <ul>
                 <li><a href="index.php">Home</a></li>
@@ -10,9 +13,22 @@
             </ul>
         </nav>
     </header>
-
-    <h2>Bienvenue</h2>
+    <main>
+        <?php session_start();
+        if (isset($_SESSION['username'])): ?>
+            <h1>Welcome, <?php echo $_SESSION['username']; ?></h1>
+            <p>You are now logged in</p>
+            <form action="./requestHandler.php" method="post">
+                <input type="hidden" name="action" value="logout">
+                <input type="submit" value="Logout">
+            </form>
+        <?php else: ?>
+            <h1>Welcome to My Website</h1>
+            <p>Please login or register to continue</p>
+        <?php endif; ?>
+    </main>
 </body>
+
 
 <?php include "./templates/parts/footer.php" ?>
 

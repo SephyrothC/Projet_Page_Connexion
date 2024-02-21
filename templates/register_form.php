@@ -15,17 +15,20 @@
             </ul>
         </nav>
     </header>
-    
-    <h2>Registration Form</h2>
-    <form method="POST" action="../requestHandler.php">
-        <input type="text" name="username" id="username" placeholder="Username" required><br><br>
+    <main>
+        <section id="Form_Box">
+            <h2>Registration Form</h2>
+            <form method="POST" action="../requestHandler.php">
+                <input type="text" name="username" id="username" placeholder="Username" required><br><br>
 
-        <input type="email" name="email" id="email" placeholder="Email" required><br><br>
+                <input type="email" name="email" id="email" placeholder="Email" required><br><br>
 
-        <input type="password" name="password" id="password" placeholder="Password" required><br><br>
-        
-        <input type="hidden" name="action" value="register">
-        <input type="submit" value="Register">
-    </form>
+                <input type="password" name="password" id="password" placeholder="Password" required><br><br>
+                
+                <input type="hidden" name="action" value="register">
+                <input type="submit" value="Register">
+            </form>
+        </section>
+    </main>
 </body>
 </html>

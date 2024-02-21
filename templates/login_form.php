@@ -20,12 +20,15 @@
     </header>
 
     <main>
+        <section id="Form_Box">
+        <h2>Login Form</h2>
         <form method="POST" action="../requestHandler.php">
             <input type="text" id="username" name="username" placeholder="Username" required><br><br>
             <input type="password" id="password" name="password" placeholder="Password" required><br><br>
             <input type="hidden" name="action" value="login">
             <input type="submit" value="Login">
         </form>
+        </section>
     </main>
 </body>
 </html>
