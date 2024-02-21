@@ -1,5 +1,6 @@
 <?php
-include './functions.php';
+    include './functions.php';
+    
 
 // Add the missing import statement
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {

@@ -1,4 +1,6 @@
-<?php include "./templates/parts/header.php" ?>
+<?php 
+    include "./templates/parts/header.php" 
+?>
 
 
 
