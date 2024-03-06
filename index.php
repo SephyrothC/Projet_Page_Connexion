@@ -21,6 +21,10 @@
             <h1>Welcome, <?php echo $_SESSION['username']; ?></h1>
             <p>You are now logged in</p>
             <form action="./requestHandler.php" method="post">
+                <input type="hidden" name="action" value="Portfolio">
+                <input type="submit" value="Protfolio">               
+            </form>
+            <form action="./requestHandler.php" method="post">
                 <input type="hidden" name="action" value="logout">
                 <input type="submit" value="Logout">               
             </form>
