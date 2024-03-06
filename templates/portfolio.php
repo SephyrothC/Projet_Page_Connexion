@@ -83,9 +83,6 @@
     <section id="Project">
       
     </section>
-    <section>
-    
-    </section>
   </main>
 
 
