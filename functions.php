@@ -50,3 +50,8 @@ function antixss($input) {
     $new = htmlspecialchars($new, ENT_QUOTES);
     return $new;
 }
+
+// create a salt function for the password
+function salt() {
+    return substr(strtr(base64_encode(random_bytes(16)), '+', '.'), 0, 22);
+}

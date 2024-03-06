@@ -22,7 +22,7 @@
             <p>You are now logged in</p>
             <form action="./requestHandler.php" method="post">
                 <input type="hidden" name="action" value="logout">
-                <input type="submit" value="Logout">
+                <input type="submit" value="Logout">               
             </form>
         <?php else: ?>
             <h1>Welcome to My Website</h1>
